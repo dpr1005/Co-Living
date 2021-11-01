@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Co-Living</title>
+</head>
+<body>
+    <form action='/' method='post'>
+        <label>
+            <input placeholder="Name" name="name">
+        </label>
+        <label>
+            <input placeholder="Post Content" name="post">
+        </label>
+        <input type="submit" value="Submit">
+    </form>
+    {% for post in posts %}
+    <div>{{ post[1] + ': ' + post[2]}}</div>
+    {% endfor %}
+</body>
+</html>

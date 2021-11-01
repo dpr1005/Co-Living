@@ -6,10 +6,8 @@ app = Flask(__name__)
 CORS(app)
 
 
-@app.route('/', methods=['GET','POST'])
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    if request.method == 'GET':
-        pass
     if request.method == 'POST':
         name = request.form.get('name')
         post = request.form.get('post')
@@ -21,4 +19,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
